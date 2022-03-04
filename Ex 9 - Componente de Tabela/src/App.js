@@ -18,6 +18,11 @@ function App() {
             event: 'valor do evento 2',
             deviceId: 'valor do deviceId 2', 
             comment: 'valor do comment 2'
+          },
+          {
+            event: 'valor do evento 3',
+            deviceId: 'valor do deviceId 3', 
+            comment: 'valor do comment 3'
           }
         ]}
         />

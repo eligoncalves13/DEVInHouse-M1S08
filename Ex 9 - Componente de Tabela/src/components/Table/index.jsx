@@ -4,13 +4,13 @@ const Table = ({ title, description, columns, data }) => {
         <div className="table-container">
             <h2>{ title }</h2>
             <p>{ description }</p>
-            <table>
-                <thead>
+            <table className="table">
+                <thead className="thead">
                     <tr>
-                        { columns.map(key => <th key={key}> {key} </th>) }
+                        { columns.map(key => <th className="th" key={key}> {key} </th>) }
                     </tr>
                 </thead>
-                <tbody>
+                <tbody  className="tbody">
                     { data.map(row => <Row row={row}/>) }
                 </tbody>
             </table>
@@ -22,8 +22,8 @@ const Table = ({ title, description, columns, data }) => {
 const Row = ({row}) => {
     const keysObject = Object.keys(row)
     return (
-        <tr key={row.deviceId}>
-        { keysObject.map(key => <td key={key}>{row[key]}</td>) }
+        <tr className="tr" key={row.deviceId}>
+        { keysObject.map(key => <td className="td" key={key}>{row[key]}</td>) }
         </tr>
     )
 }
